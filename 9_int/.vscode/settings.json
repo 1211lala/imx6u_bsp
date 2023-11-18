@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "bsp_key.h": "c",
+        "bsp_gpio.h": "c",
+        "main.h": "c",
+        "bsp_clk.h": "c",
+        "bsp_delay.h": "c",
+        "imx6u.h": "c",
+        "bsp_interrupt.h": "c",
+        "bsp_exti.h": "c"
+    }
+}

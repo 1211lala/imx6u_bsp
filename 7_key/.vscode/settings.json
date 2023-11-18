@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "bsp_key.h": "c",
+        "bsp_gpio.h": "c",
+        "main.h": "c"
+    }
+}

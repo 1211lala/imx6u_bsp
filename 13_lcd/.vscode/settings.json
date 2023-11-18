@@ -1,0 +1,17 @@
+{
+    "files.associations": {
+        "bsp_delay.h": "c",
+        "bsp_epit.h": "c",
+        "main.h": "c",
+        "bsp_exti.h": "c",
+        "bsp_interrupt.h": "c",
+        "bsp_uart.h": "c",
+        "bsp_clk.h": "c",
+        "stdio.h": "c",
+        "types.h": "c",
+        "bsp_lcd.h": "c",
+        "cstdlib": "c",
+        "bsp_lcdapi.h": "c",
+        "font.h": "c"
+    }
+}
