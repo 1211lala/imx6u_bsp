@@ -1,5 +1,6 @@
 #目标文件名
-TRAGET			?= iic
+TRAGET			?= i2c
+
 
 CROSS_COMPTLE	?= arm-linux-gnueabihf-
 CC 			  	:= $(CROSS_COMPTLE)gcc

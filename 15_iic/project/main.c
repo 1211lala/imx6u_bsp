@@ -22,19 +22,21 @@ int main(void)
     my_uart1_init(115200);
     /* LCD初始化 黄屏 */
     my_lcd_init();
-    tftlcd_dev.backcolor = LCD_YELLOW;
+    tftlcd_dev.backcolor = LCD_BLACK;
     tftlcd_dev.forecolor = LCD_RED;
     /* RTC初始化 */
-    my_rtc_init();
-
+    // my_rtc_init();
+    ap3216c_init();
     while(1) 
     {
-        rtc_get_datetime(&rtc_Date);
-        
-        sprintf((char*)lcd_buf, "%4d:%2d:%2d:%2d:%d:%2d",rtc_Date.year, rtc_Date.month, rtc_Date.day, rtc_Date.hour, rtc_Date.minute, rtc_Date.second);
-        printf("%s\r\n", lcd_buf);
-        lcd_show_string(100, 100, 300, 32, 32, (char*)lcd_buf);
+        uint16_t ir;
+        uint16_t ps;
+        uint16_t als;
+        sprintf((char*)lcd_buf, "ir = %4d  ps= %4d als= %4d     ", ir, ps, als);
+        lcd_show_string(100, 100, 1200, 32, 32 , (char*)lcd_buf);
+        ap3216c_readdata(&ir, &ps, &als);
         my_delay_ms(100);
+        printf("%d %d %d \r\n", ir, ps, als );
     }
     return 0;
 }
